@@ -1,0 +1,22 @@
+{{ define "main" }}
+	<main>
+		<div>
+		<div>
+		<div>
+		{{ if or .Title .Content }}
+		<div>
+			{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+			{{ with .Content }}<div>{{ . }}</div>{{ end }}
+		</div>
+		{{ end }}
+
+		{{ range .Paginator.Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+		{{ partial "pagination.html" . }}
+		</div>
+		</div>
+		</div>
+	</main>
+{{ partial "sidebar.html" . }}
+{{ end }}

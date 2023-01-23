@@ -1,0 +1,26 @@
+<header>
+	<div>
+	<a style="height: 142px" href="/">
+		<img
+			style="height: 100%; width: auto; display: block"
+			src="/{{ .Site.Title | anchorize }}.png"
+			alt="{{ .Site.Title }}"
+			title="{{ .Site.Title }}"
+		/>
+	</a>
+	</div>
+	<div>
+	{{ with .Site.Menus.main }}
+	{{ range .ByWeight }}
+	<a style="height: 62px" href="{{ .URL | relURL }}">
+		<img
+			style="height: 100%; width: auto; display: block"
+			src="/{{ .Name | anchorize }}.png"
+			alt="{{ .Title }}"
+			title="{{ .Title }}"
+		/>
+	</a>
+	{{ end }}
+	{{ end }}
+	</div>
+</header>

@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.3em;
+}
+
+body,
+html,
+ul,
+ol,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  color: #2bff2f;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+
+header {
+  background-color: #0e1028;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+header :last-child {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+}
+
+header a {
+  display: inline-block;
+}
+
+header a img {
+  transition: filter 0.3s ease-out;
+}
+
+header a:hover img {
+  filter: saturate(0);
+}
+
+main {
+  min-height: calc(100vh - 100px);
+  background: linear-gradient(0deg, #1a2f6e 0%, #313355 100%);
+  border-top: solid 5px black;
+  padding: 80px;
+}
+
+main > div {
+  width: 100%;
+  min-height: 60vh;
+  border: solid 4px black;
+  padding: 2px;
+  transform: rotate(-1.5deg);
+}
+
+main > div > div {
+  width: 100%;
+  min-height: 60vh;
+  transform: rotate(2.5deg);
+  border: solid 3px black;
+}
+
+main > div > div > div {
+  background-color: #0e1028;
+  width: 100%;
+  min-height: 60vh;
+  padding: 50px;
+  text-align: center;
+  transform: rotate(-1deg);
+}
+
+.box {
+  display: inline-block;
+}
+.box img {
+  height: 400px !important;
+  width: auto;
+}
+
+@media only screen and (max-width: 1125px) {
+  .box img {
+    height: 320px !important;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .box img {
+    height: 270px !important;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .box img {
+    height: 230px !important;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 825px) {
+  .box img {
+    height: 330px !important;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header :first-child a {
+    transform: rotate(-90deg);
+    translate: -25% -25%;
+    margin-right: -100px;
+    padding-bottom: 20px;
+  }
+
+  header :last-child {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .box img {
+    height: 400px !important;
+    width: auto;
+  }
+}
